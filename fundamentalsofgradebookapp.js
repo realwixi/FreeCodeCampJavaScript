@@ -29,12 +29,12 @@ function hasPassingGrade(score) {
 }
 
 function studentMsg(totalScores, studentScore) {
-  if (getGrade(studentScore)==='F'){
-    return "Class average: "+getAverage(totalScores)+". Your grade: "+getGrade(studentScore)+". You failed the course."; 
+  if (hasPassingGrade(studentScore)){
+    return "Class average: "+getAverage(totalScores)+". Your grade: "+getGrade(studentScore)+". You passed the course."; 
   }
   else
   {
-    return "Class average: "+getAverage(totalScores)+". Your grade: "+getGrade(studentScore)+". You passed the course.";
+    return "Class average: "+getAverage(totalScores)+". Your grade: "+getGrade(studentScore)+". You failed the course.";
   }
   }
 
